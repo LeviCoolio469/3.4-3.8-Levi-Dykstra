@@ -1,0 +1,90 @@
+
+.main_content{
+    font-family: "Figtree", sans-serif;
+    width:80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: justify;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("images/woodstock_concert.jpg");
+
+  /* Set a specific height */
+  min-height: 450px;
+  margin: 0px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  height: 100px;
+  background-color: #333;
+  font-size: 18px;
+  padding: 3%;
+  color: white;
+  text-align: center;
+}
+
+footer .left_anchor{ /*furthest left anchor has 10% margin left to laine up with main content*/
+	margin-left:8%;
+}
+
+footer .right { /*furthest right anchor image for 10% margin to line up with main content*/
+	margin-right:8%;
+}
+
+footer a{
+	color:white;
+	text-decoration: none;
+}
+
+footer p{
+	font-size:18px;
+	margin-left:8%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 22px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: background-color 0.2s;
+}
+
+.topnav img {
+  float: left;
+  height: 60px;
+  width: auto;
+  padding: 1px 0px 1px 0px;
+  margin-left: 10%;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
