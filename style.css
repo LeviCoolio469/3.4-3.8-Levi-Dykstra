@@ -43,6 +43,36 @@ h1,h2{
   background-size: cover;
 }
 
+.parallax_timeline{
+    /* The image used */
+  background-image: url("images/random_metal_concert.jpg");
+
+  /* Set a specific height */
+  min-height: 450px;
+  margin: 0px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_interviews{
+    /* The image used */
+  background-image: url("images/gig-tour-concert.jpg");
+
+  /* Set a specific height */
+  min-height: 450px;
+  margin: 0px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 footer {
   height: 100px;
   background-color: #333;
