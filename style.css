@@ -24,6 +24,11 @@ h1,h2{
   padding: 10px;
 }
 
+.left-align-container h1, 
+.left-align-container h2 {
+  text-align: left;
+}
+
 .content{
   text-align: left;
   font-size: 18px;
@@ -99,6 +104,7 @@ h1,h2{
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
 .underline{
