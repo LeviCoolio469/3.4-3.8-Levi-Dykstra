@@ -13,7 +13,7 @@
 }
 
 body{
-  background: url(images/metallica-garage.jpg);
+  background: url(images/paranoid_album_cover.png);
   background-size: cover;
   background-position: center center;
 }
@@ -33,6 +33,12 @@ h1,h2{
   text-align: left;
   font-size: 18px;
   font-family: "Figtree", sans-serif;
+}
+
+#info-image {
+  width: auto;
+  height: 120px;
+  justify-content: center;
 }
 
 .parallax {
@@ -217,6 +223,62 @@ footer p{
   overflow: hidden;
   text-align: left;
   margin-right: 400px;
+}
+
+.container{
+  display: grid;
+
+}
+.container__box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 15px;
+}
+.container .container__box .box{
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  padding: 20px 30px;
+  transition: box-shadow 0.2s;
+}
+
+.container .container__box .box:hover{
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+*{
+  margin: 20;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: .2s, linear;
+}
+.container__heading{
+  text-align: center;
+  padding-bottom: 15px;
+  color: #e3e3e3;
+  text-shadow: 0 0 10px black;
+  font-size: 50px;
+  font-weight: 600;
+}
+.container .container__box .box h3{
+  color: #444;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container .container__box .box p{
+  font-size: 14px;
+  font-weight: 100;
+  color: #555;
+}
+.container .container__box .box a{
+  border-radius: 4px;
+  background:#444;
+  color: white;
+}
+.container .container__box .box a:hover{
+  background: #908080;
 }
 
 @media screen and (max-width: 600px) {
