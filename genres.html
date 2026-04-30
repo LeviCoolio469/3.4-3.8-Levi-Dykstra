@@ -38,54 +38,84 @@
                 <div class="box">
                     <h1>&#129304;</h1>
                     <h3>Heavy Metal</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, soluta.</p>
-                    <button onclick="showInfo()">Read More</button>
-                    <img id="info-image" src="images/black-sabbath-b&w.jpg" style="display:none; width:300px;">
+                    <p>The basic, classic form of metal built on loud guitars and strong, steady riffs.</p>
+                    <button id="openModal">Open Modal</button>
+
+                    <!-- Full-screen Overlay -->
+                    <div id="modalOverlay" class="modal">
+                    <!-- Modal Content Box -->
+                      <div class="modal-box">
+                        <h2>About Heavy Metal</h2>
+                        <p>descirption.</p>
+                        <button id="closeModal">Close</button>
+                     </div>
+                    </div>
                 </div>
             
                 <div class="box">
                     <h1>&#9889;</h1>
                     <h3>Thrash Metal</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, soluta.</p>
+                    <p>Faster, sharper metal focused on speed and aggression.</p>
                     <button onclick="showInfo()">Read More</button>
                 </div>
                 
                 <div class="box">
                     <h1>&#128128;&#129656;</h1>
                     <h3>Death Metal</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, soluta.</p>
+                    <p>Extremely heavy metal with deep growls and very intense guitar work.</p>
                     <button onclick="showInfo()">Read More</button>
                 </div>
                 
                 <div class="box">
                     <h1>&#127794;&#9959;</h1>
                     <h3>Black Metal</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, soluta.</p>
+                    <p>Harsh, raw metal with high‑pitched screams and dark atmosphere.</p>
                     <button onclick="showInfo()">Read More</button>
                 </div>
                 
                 <div class="box">
                     <h1>&#127908;</h1>
                     <h3>Metalcore</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, soluta.</p>
+                    <p>Metal mixed with hardcore punk, known for breakdowns and shouted vocals.</p>
                     <button onclick="showInfo()">Read More</button>
                 </div>
                 
                 <div class="box">
                     <h1>&#247;&#129504;&#215;</h1>
                     <h3>Prog Metal</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, soluta.</p>
+                    <p>Metal that uses complex song structures and unusual musical ideas.</p>
+                    <button onclick="showInfo()">Read More</button>
+                </div>
+
+                <div class="box">
+                    <h1>&#127769;&#129415;</h1>
+                    <h3>Doom Metal</h3>
+                    <p>Slow, heavy metal that feels dark, gloomy, and crushing.</p>
+                    <button onclick="showInfo()">Read More</button>
+                </div>
+
+                <div class="box">
+                    <h1>&#9876;&#128293;</h1>
+                    <h3>Power Metal</h3>
+                    <p>Fast, melodic metal with high vocals and an epic, uplifting feel.</p>
                     <button onclick="showInfo()">Read More</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="modal" id="info-image"></div>
     <script>
-      function showInfo() {
-        document.getElementById('info-image').style.display = 'block';
-        
-      }
+        const overlay = document.getElementById('modalOverlay');
+        const openBtn = document.getElementById('openModal');
+        const closeBtn = document.getElementById('closeModal');
+
+        openBtn.onclick = () => overlay.style.display = 'flex';
+        closeBtn.onclick = () => overlay.style.display = 'none';
+
+        // Close if user clicks the dark overlay background
+        window.onclick = (event) => {
+        if (event.target === overlay) overlay.style.display = 'none';
+        };
     </script>
 
 </body>
