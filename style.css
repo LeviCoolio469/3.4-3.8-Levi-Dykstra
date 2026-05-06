@@ -1,481 +1,632 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Commissioner:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
-
-.main_content{
-    font-family: "Figtree", sans-serif;
-    width:90%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    text-align: justify;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 5px;
-    font-family: "Inter", sans-serif;
-    background-color: white;
+/* Stylises the main content of the pages */
+.main_content {
+	font-family: "Inter", sans-serif;
+	width: 90%;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	text-align: justify;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 5px;
+	font-family: "Inter", sans-serif;
+	background-color: #fafafa;
 }
-
-.modal{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+/* Creates a container to capsulate the autoplaying video */
+.parallax-container {
+	position: relative;
+	height: 500px;
+	/* Adjust as needed */
+	overflow: hidden;
+	clip-path: inset(0 0 0 0);
+	display: flex;
+	align-items: center;
+	/* Vertical center */
+	justify-content: center;
 }
-
+/* Makes the 'metal music' image centered and slightly translucent */
+.parallax-container img {
+	height: auto;
+	display: block;
+	opacity: 95%;
+}
+/* stylises the video in the parallax */
+.parallax-video {
+	position: fixed;
+	/* Fixes video to the viewport */
+	top: 0;
+	left: 0;
+	height: 800px;
+	min-width: 100%;
+	z-index: -1;
+	/* Places video behind content */
+	object-fit: cover;
+	opacity: 40%;
+}
+/* creates the modals for genres page */
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.65);
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+/* creates the boxes with button to pop up modals */
 .modal-box {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 600px;
-  text-align: center;
+	background: white;
+	padding: 30px;
+	border-radius: 8px;
+	width: 800px;
+	text-align: center;
+	font-family: "Inter", sans-serif;
 }
-
-.modal-img{
-  width: 400px;
-  justify-content: center;
-  margin-bottom: 50px;
+/* puts image inside modal below description */
+.modal-box img {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	height: 50%;
+	max-height: 100vh;
+	border-radius: 5px;
 }
-
-body{
-  background: url(images/paranoid_album_cover.png);
-  background-size: cover;
-  background-position: center center;
+/* stylises the button on modal boxes */
+.modal-box button, .container .container__box .box button {
+	background-color: #f8f9fa;
+	border: 1px solid #f8f9fa;
+	border-radius: 4px;
+	color: #3c4043;
+	cursor: pointer;
+	font-size: 14px;
+	height: 36px;
+	line-height: 27px;
+	min-width: 54px;
+	padding: 0 16px;
+	text-align: center;
+	user-select: none;
+	touch-action: manipulation;
+	white-space: pre;
 }
-
-h1,h2{
-  text-align: center;
-  font-family: "Commissioner", sans-serif;
-  padding: 10px;
+/* creates hover effect for modal box buttons */
+.modal-box button:hover, .container .container__box .box button:hover {
+	border-color: #dadce0;
+	box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+	color: #202124;
 }
-
-.left-align-container h1, 
-.left-align-container h2 {
-  text-align: left;
+/* enhances aesthetics for buttons */
+.modal-box button:focus, .container .container__box .box button:focus {
+	border-color: #4285f4;
+	outline: none;
 }
-
-.text_content{
-  text-align: left;
-  font-size: 18px;
-  font-family: "Figtree", sans-serif;
+/* gives the background a dark gray colour */
+body {
+	background-color: #111;
+	background-size: cover;
+	background-position: center center;
 }
-
+/* makes the two biggest header tags centered by default */
+h1, h2 {
+	text-align: center;
+	font-family: "Commissioner", sans-serif;
+	padding: 10px;
+}
+/* makes the iframes across pages correct ratio and not stretched */
+iframe {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: 40.25vw;
+	max-height: 100vh;
+}
+/* makes h1 and h2 tags align left for these containers */
+.left-align-container h1, .left-align-container h2 {
+	text-align: left;
+}
+/* stylises general text sections in pages */
+.text_content {
+	text-align: left;
+	font-size: 18px;
+	font-family: "Inter", sans-serif;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 5px;
+}
+/* testing id with images under descriptions */
 #info-image {
-  width: auto;
-  height: 120px;
-  justify-content: center;
+	width: auto;
+	height: 120px;
+	justify-content: center;
 }
-
+/* testing id for turning background colour dark grey */
 #dark-gray {
-  background-color:#444;
+	background-color: #444;
 }
-
-.parallax {
-  /* The image used */
-  background-image: url("images/woodstock_concert.jpg");
-
-  /* Set a specific height */
-  min-height: 450px;
-  margin: 0px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
+/* gives genres page the parallax image */
 .parallax_genres {
-  /* The image used */
-  background-image: url("images/Alissa_White_Gluz_Live_Concert.jpg");
-
-  /* Set a specific height */
-  min-height: 450px;
-  margin: 0px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	/* The image used */
+	background-image: url("images/allisa-white-concert.jpg");
+	/* Set a specific height */
+	min-height: 450px;
+	margin: 0px;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-.parallax_timeline{
-    /* The image used */
-  background-image: url("images/random_metal_concert.jpg");
-
-  /* Set a specific height */
-  min-height: 450px;
-  margin: 0px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* gives timeline page the parallax image */
+.parallax_timeline {
+	/* The image used */
+	background-image: url("images/woodstock_concert.jpg");
+	/* Set a specific height */
+	min-height: 450px;
+	margin: 0px;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-.parallax_interviews{
-    /* The image used */
-  background-image: url("images/gig-tour-concert.jpg");
-
-  /* Set a specific height */
-  min-height: 450px;
-  margin: 0px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* gives interviews page the parallax image */
+.parallax_interviews {
+	/* The image used */
+	background-image: url("images/studio-room.jpg");
+	/* Set a specific height */
+	min-height: 450px;
+	margin: 0px;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-.parallax_content{
-  text-align: center;
-  font-size: 80px;
-  color: red;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
+/* makes the metal music image fade in when entering home page */
+.parallax-img {
+	height: auto;
+	display: block;
+	opacity: 0;
+	animation: fadeIn 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s forwards;
 }
-
-.underline{
-  width: 90%;
-  height: 2px;
-  background-color: black;
-  justify-self: center;
-  margin-bottom: 30px;
+/* executing class above */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(1.1)
+	}
+	to {
+		opacity: 0.8;
+		transform: scale(1)
+	}
 }
-
+/* gives underline for many sections across pages */
+.underline {
+	width: 90%;
+	height: 2px;
+	background-color: black;
+	justify-self: center;
+	margin-bottom: 30px;
+}
+/* creates blank section for separating sections */
+.blank {
+	width: 90%;
+	height: 2px;
+	justify-self: center;
+	margin-bottom: 30px;
+}
+/* stylises footer */
 footer {
-  height: 100px;
-  background-color: #000000;
-  font-size: 18px;
-  padding: 3%;
-  color: white;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
+	height: 150px;
+	background-color: #000000;
+	font-size: 18px;
+	padding: 3%;
+	color: white;
+	text-align: center;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
 }
-
-footer .left_anchor{ /*furthest left anchor has 10% margin left to laine up with main content*/
-	margin-left:8%;
+footer .left_anchor {
+	/*furthest left anchor has 10% margin left to laine up with main content*/
+	margin-left: 8%;
 }
-
-footer .right { /*furthest right anchor image for 10% margin to line up with main content*/
-	margin-right:8%;
+footer .right {
+	/*furthest right anchor image for 10% margin to line up with main content*/
+	margin-right: 8%;
 }
-
-footer a{
-	color:white;
+/* stylises footer links */
+footer a {
+	color: white;
 	text-decoration: none;
+	padding: 10px;
+	position: relative;
+	transition: color 1s ease;
 }
-
-footer p{
-	font-size:18px;
-	margin-left:8%;
+/* stylises footer disclaimers */
+footer p {
+	font-size: 15px;
+	margin-left: 2%;
+	padding-top: 30px;
 }
-
+/* stylises hover effect of footer anchor tags */
+footer a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #A6A6A6, transparent);
+	background-size: 300% 100%;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+/* hover effect for footer links */
+footer a:hover {
+	color: #a6a6a6
+}
+/* effect for hover */
+footer a:hover::after {
+	opacity: 1;
+	animation: shimmer111 2s linear infinite !important;
+}
+/* execute animations for footer hover */
+@keyframes shimmer111 {
+	0% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: -200% 0;
+	}
+}
+/* stylises topnav bar */
 .topnav {
-  overflow: hidden;
-  background-color: #000000;
-  padding-right: 20px;
+	overflow: hidden;
+	background-color: #000000;
+	padding-right: 20px;
+	padding-top: 17px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px 20px;
 }
-
+/* stylises navbar links */
 .topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 22px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  transition: background-color 0.2s;
-  font-family: "Inter", sans-serif;
-  font-weight: 400px;
+	float: right;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 22px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	transition: background-color 0.2s;
+	font-family: "Inter", sans-serif;
+	position: relative;
+	transition: all 0.3s ease;
+	float: none;
+	display: block;
 }
-
+/* positions navbar logo left*/
 .topnav img {
-  float: left;
-  height: 80px;
-  width: auto;
-  margin-left: 5%;
+	height: 80px;
+	margin-right: auto;
 }
-
+/* effect for hover over topnav links */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+	transform: translateY(-3px);
 }
-
+/* effect for underlining part of hover effect */
+.topnav a::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background-color: red;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 0.3s ease;
+}
+/* animates link up when hovered over */
+.topnav a:hover::before {
+	transform: scaleY(1);
+}
+/* makes the active page link red to indicate which page user is on */
 .topnav a.active {
-  background-color: #FF0000;
-  color: white;
+	background-color: #FF0000;
+	color: white;
+	border-radius: 5px;
 }
-
 .topnav .icon {
-  display: none;
+	display: none;
 }
-
+/* puts '+' symbol on accordions to indicate clickable element */
 .accordion_icon {
-  font-size: 17px;
-  float: right;
+	font-size: 17px;
+	float: right;
 }
-
-.accordion { 
-  background-color: #eee;
-  color: #444;
-  cursor: help;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.3s;
-  margin-bottom: 10px;
-  border-radius: 5px;
+/* stylises accordion buttons */
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: help;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.3s;
+	margin-bottom: 10px;
+	border-radius: 5px;
 }
-
+/* hover effect for accordions */
 .active, .accordion:hover {
-  background-color: #ccc;
-  font-size: 15.3px;
+	background-color: #ccc;
+	font-size: 15.3px;
 }
-
+/* stylising drop down panel for accordions */
 .panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-  text-align: left;
-  margin-right: 400px;
+	padding: 0 18px;
+	display: none;
+	background-color: rgb(240, 240, 240);
+	overflow: hidden;
+	text-align: left;
+	transition: max-height 0.3s ease-out;
+	max-height: 500px;
+	overflow-y: auto;
+	border-radius: 10px;
+	margin-bottom: 20px;
 }
-
-.container{
-  display: grid;
-
+/* makes grid for modal boxes */
+.container {
+	display: grid;
 }
-.container__box{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 15px;
+/* creates gap between modal boxes */
+.container__box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 20px;
 }
-.container .container__box .box{
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  text-align: center;
-  padding: 20px 30px;
-  transition: box-shadow 0.2s;
+/* makes shadow for modal boxes */
+.container .container__box .box {
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	text-align: center;
+	padding: 10px 30px;
+	transition: box-shadow 0.2s;
 }
-
-.container .container__box .box:hover{
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+/* animates box shadow for modal boxes */
+.container .container__box .box:hover {
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-
-*{
-  margin: 20;
-  padding: 0;
-  box-sizing: border-box;
-  text-transform: capitalize;
-  transition: .2s, linear;
+/* stylises headings for modal boxes */
+.container__heading {
+	text-align: center;
+	padding-bottom: 15px;
+	color: #e3e3e3;
+	text-shadow: 0 0 10px black;
+	font-size: 50px;
+	font-weight: 600;
 }
-.container__heading{
-  text-align: center;
-  padding-bottom: 15px;
-  color: #e3e3e3;
-  text-shadow: 0 0 10px black;
-  font-size: 50px;
-  font-weight: 600;
+/* stylises h3 for modal boxes */
+.container .container__box .box h3 {
+	color: #444;
+	font-size: 20px;
+	font-weight: 600;
 }
-.container .container__box .box h3{
-  color: #444;
-  font-size: 20px;
-  font-weight: 600;
+.container .container__box .box p {
+	font-size: 14px;
+	font-weight: 100;
+	color: #555;
 }
-.container .container__box .box p{
-  font-size: 14px;
-  font-weight: 100;
-  color: #555;
+.container .container__box .box a {
+	border-radius: 4px;
+	background: #444;
+	color: white;
 }
-.container .container__box .box a{
-  border-radius: 4px;
-  background:#444;
-  color: white;
+.container .container__box .box a:hover {
+	background: #908080;
 }
-.container .container__box .box a:hover{
-  background: #908080;
-}
-
 /* The actual timeline (the vertical ruler) */
+
 .timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 0;
 }
-
 /* The actual timeline (the vertical ruler) */
+
 .timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  opacity: 80%;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+	content: '';
+	position: absolute;
+	width: 6px;
+	background: white;
+	opacity: 0.8;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
+/* shared container */
 
-/* Container around content */
 .timeline_container {
-  padding: 18px 40px;
-  position: relative;
-  width: 50%;
+	position: relative;
+	width: 50%;
+	padding: 18px 40px;
+	box-sizing: border-box;
 }
-
 /* The circles on the timeline */
+
 .timeline_container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 18px;
+	background: white;
+	border: 4px solid #FF9F55;
+	border-radius: 50%;
+	z-index: 2;
 }
-
 /* Place the container to the left */
+
 .left {
-  left: 0;
+	left: 0;
 }
+/* RIGHT SIDE */
 
-/* Place the container to the right */
 .right {
-  left: 50%;
+	left: 50%;
 }
-
 /* Add arrows to the left container (pointing right) */
+
 .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+	content: '';
+	position: absolute;
+	top: 22px;
+	right: 30px;
+	border: 10px solid transparent;
+	border-left-color: white;
 }
-
-/* Add arrows to the right container (pointing left) */
 .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+	content: '';
+	position: absolute;
+	top: 22px;
+	left: 30px;
+	border: 10px solid transparent;
+	border-right-color: white;
 }
+.left::after {
+	right: -12.5px;
+}
+/* RIGHT circle sits on center line */
 
-/* Fix the circle for containers on the right side */
 .right::after {
-  left: -16px;
+	left: -12.5px;
 }
+/* The actual content in the timeline boxes*/
 
-/* The actual content */
 .content {
-  padding: 20px 20px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
+	background: white;
+	padding: 20px;
+	border-radius: 6px;
+	position: relative;
+	font-size: 13px;
+	text-align: left;
 }
-
+/* puts images under descriptions inside the boxes */
+.content img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+	border-radius: 5px;
+}
+/* Adjusts layouts for screens 600px wide or smaller*/
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav a:first-of-type {
-  margin-top: 80px;
-  }
-  .topnav img {
-    margin-left: 2%;
-  }
-  .topnav {
-    padding-right: 0px;
-  }
-  .main_content {
-    width: 95%;
-  }
-  iframe {
-    width: 100%;
-    height: 250px;
-  }
-  .panel {
-    margin-right: 0px;
-  }
-  .text_content {
-    font-size: 15px;
-  }
-  .timeline::after {
-    left: 31px;
-  }
-
-/* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
+	.topnav.responsive {
+		position: relative;
+	}
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	.topnav a.icon { /* creates conventional size and position for phone menu */
+		float: right;
+		display: block;
+		margin-right: 10px;
+		font-size: 30px;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	.topnav a:first-of-type {
+		margin-top: 80px;
+	}
+	.topnav img { /* Adjusts logo slightly to right */
+		margin-left: 2%;
+	}
+	.topnav {
+		padding-right: 0px; /* removes the padding on right that's on desktop */
+	}
+	iframe { /* makes full size for iframes biggest */
+		width: 100%;
+		padding: 5px;
+	}
+	.main_content { /* widens main content */
+		width: 95%;
+	}
+	.panel { /* removes margin on right */
+		margin-right: 0px;
+	}
+	.text_content { /* makes font size smaller for information sections */
+		font-size: 15px;
+	}
+	.timeline::after {
+		left: 31px;
+		transform: none;
+	}
+	.timeline_container {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+	.left, .right {
+		left: 0;
+	}
+	.left::after, .right::after {
+		left: 18px;
+	}
+	.left::before, .right::before {
+		left: 50px;
+		right: auto;
+		border: 10px solid transparent;
+		border-right-color: white;
+	}
+	/* Full-width containers */
+	.container {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	/* Make sure that all arrows are pointing leftwards */
+	.container::before {
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+	/* Make sure all circles are at the same spot */
+	.left::after, .right::after {
+		left: 15px;
+	}
+	/* Make all right containers behave like the left ones */
+	.right {
+		left: 0%;
+	}
 }
-
 @media screen and (min-width: 600px) {
-  .panel {
-    margin-right: 150px;
-  }
+	.panel p {
+		margin-right: 150px;
+	}
+	.text_content {
+		margin: 0%;
+	}
 }

@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="responsive_nav.js"></script>
-    <title>3.4 Site</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="style.css" rel="stylesheet">
+	<link href="normalize.css" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="responsive_nav.js">
+	</script>
+	<title>3.4 Site</title>
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-      <img src="images/website-logo.png">
-        <a href="interviews.html">Interviews</a>
-        <a href="timeline.html" class="active">Timeline</a>
-        <a href="genres.html">Genres</a>
-        <a href="index.html">Home</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-    <div class="parallax_timeline">
-        <h1 class="parallax_content">Timeline</h1>
-    </div>
-
-    <div class="main_content">
-        <h1>Timeline of Metal</h1>
-        <div class="underline"></div>
-        <div class="text_content">
-            <p>Metal didn’t just appear fully formed — it grew, fractured, and reinvented itself year after year, leaving behind a trail of riffs, scenes, and breakthroughs that shaped everything we hear today. This timeline is built to show that evolution in motion. As you scroll downward, you move through the decades the same way metal did: from the early sparks that defined the genre’s identity, through the explosions of new subgenres, to the constant experimentation that keeps metal alive. Each point marks a moment where someone pushed the sound further, broke a rule, or created something no one had heard before. It’s less a straight line and more a living map of how metal kept expanding, mutating, and refusing to stay in one box. This page is here to make that journey visible — a way to watch the genre grow as you move through its history.</p>
-        </div>
-        <div class="underline"></div>
-
-        <div class="main_content" id="dark-gray">
-            <div class="timeline">
-                <div class="timeline_container left">
-                    <div class="content">
-                        <h2>1970</h2>
-                        <p>Lorem ipsum.</p>
-                    </div>
-                </div>
-                <div class="timeline_container right">
-                    <div class="content">
-                        <h2>1977</h2>
-                        <p>Lorem ipsum..</p>
-                    </div>
-                </div>
-                <div class="timeline_container left">
-                    <div class="content">
-                        <h2>1983</h2>
-                        <p>Lorem ipsum.</p>
-                    </div>
-                </div>
-                <div class="timeline_container right">
-                    <div class="content">
-                        <h2>1984</h2>
-                        <p>Lorem ipsum..</p>
-                        <img src="images/bathory-selftitled.jpg">
-                    </div>
-                </div>
-                <div class="timeline_container left">
-                    <div class="content">
-                        <h2>1985</h2>
-                        <p>Lorem ipsum.</p>
-                    </div>
-                </div>
-                <div class="timeline_container right">
-                    <div class="content">
-                        <h2></h2>
-                        <p>Lorem ipsum..</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <a href="index.html">Home</a> |
-        <a href="genres.html">Genres</a> |
-        <a href="timeline.html">Timeline</a> |
-        <a href="interviews.html">Interviews</a>
-        <p>Site developed and maintained by Levi Dykstra &copy;</p>
-    </footer>
+	<div class="topnav" id="myTopnav"> <!-- top nav starts -->
+		<img src="images/website-logo.png" alt="metal-logo"> <a href="index.html">Home</a> <a href="genres.html">Genres</a> <a class="active" href="timeline.html">Timeline</a> <a href="interviews.html">Interviews</a> <a class="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a> <!-- navbar and links -->
+	</div> <!-- top nav ends -->
+	<div class="parallax_timeline"> <!-- adds parallax image under navbar -->
+		<div class="parallax-container"><img src="images/metal-music.png" alt="metal-music-logo"></div> <!-- adds 'metal music' image on parallax image -->
+	</div>
+	<div class="main_content"> <!-- start of main content -->
+		<h1>Timeline of Metal</h1>
+		<div class="underline"></div> <!-- underlines header -->
+		<div class="text_content"> <!-- section of information on the timeline of metal music -->
+			<p>Metal didn’t just appear fully formed — it grew, fractured, and reinvented itself year after year, leaving behind a trail of riffs, scenes, and breakthroughs that shaped everything we hear today. This timeline is built to show that evolution in motion. As you scroll downward, you move through the decades the same way metal did: from the early sparks that defined the genre’s identity, through the explosions of new subgenres, to the constant experimentation that keeps metal alive. Each point marks a moment where someone pushed the sound further, broke a rule, or created something no one had heard before. It’s less a straight line and more a living map of how metal kept expanding, mutating, and refusing to stay in one box. This page is here to make that journey visible — a way to watch the genre grow as you move through its history.</p>
+		</div>
+		<div class="underline"></div>
+		<div class="main_content" id="dark-gray"> <!-- start of main content -->
+			<div class="timeline">
+				<div class="timeline_container left">
+					<div class="content"> <!-- content of timeline box 1 -->
+					<h2>1970</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>Black Sabbath’s debut album Black Sabbath, released in 1970, is widely seen as the moment heavy metal truly began.</strong> Its dark, downtuned riffs and eerie atmosphere were completely new at the time, and the title track’s ominous sound set the template for what metal would become. That first record marked the moment the genre truly began.</p><img src="images/black-sabbath-b&w.jpg" alt="black-sabbath"></div>
+				</div>
+				<div class="timeline_container right">
+					<div class="content"> <!-- content of timeline box 2 -->
+					<h2>1977</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1977 is often marked as the birth of speed metal, driven largely by Motörhead’s raw, high‑velocity sound.</strong> When Motörhead released albums like Motörhead and began defining their signature style, they pushed metal into faster, louder, and more aggressive territory than anyone else at the time. Their breakneck tempos, gritty distortion, and no‑nonsense attitude created a blueprint that would inspire the entire speed‑metal movement and set the stage for thrash in the decade that followed.</p><img src="images/motorhead.jpg" alt="motorhead-band"></div>
+				</div>
+				<div class="timeline_container left">
+					<div class="content"> <!-- content of timeline box 3 -->
+					<h2>1983</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1983 is remembered as the true beginning of thrash metal, driven by Metallica’s debut album Kill ’Em All.</strong> With its breakneck riffs, aggressive speed, and raw, youthful intensity, the album pushed metal into a new, faster, and more extreme direction. Kill ’Em All took the energy of speed metal and sharpened it into something harsher and more precise, laying the foundation for the entire thrash movement that would dominate the rest of the decade.</p><img src="images/metallica-kill-em-all.jpg" alt="metallica-album"></div>
+				</div>
+				<div class="timeline_container right">
+					<div class="content"> <!-- content of timeline box 4 -->
+					<h2>1984</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1984 marked a major turning point for extreme music when Bathory released their self‑titled debut, a record widely seen as the true beginning of first‑wave black metal.</strong> With its raw production, harsh vocals, and dark, chaotic atmosphere, Bathory pushed far beyond the aggression of thrash and speed metal. Quorthon’s sound was colder, more primitive, and more sinister than anything else at the time, laying the foundation for the black‑metal style that would fully explode in the early ’90s.</p><img src="images/bathory-selftitled.jpg" alt="bathory-album"></div>
+				</div>
+				<div class="timeline_container left">
+					<div class="content"> <!-- content of timeline box 5 -->
+					<h2>1985</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1985 saw thrash metal explode even further with Exodus’s debut Bonded by Blood, one of the genre’s most influential early releases.</strong> Its razor‑sharp riffs, violent speed, and raw, unfiltered energy captured the Bay Area thrash sound at its most aggressive. While Metallica helped launch the movement, Bonded by Blood proved how intense and uncompromising thrash could be, becoming a cornerstone of the genre’s first wave.</p><img src="images/exodus-band.jpg" alt="exodus-band"></div>
+				</div>
+				<div class="timeline_container right">
+					<div class="content"> <!-- content of timeline box 6 -->
+					<h2>1987</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1987 marked the birth of grindcore with Napalm Death’s debut Scum, a record that shattered every boundary of speed and extremity.</strong> Its blisteringly short songs, blast‑beat drumming, and raw, chaotic sound pushed beyond thrash and hardcore, creating a new form of extreme music built on pure intensity. Scum didn’t just start grindcore — it redefined what “fast” and “heavy” could mean, influencing countless extreme‑metal bands that followed.</p><img src="images/napalm-death.jpg" alt="napalm-death-band"></div>
+				</div>
+				<div class="timeline_container left">
+					<div class="content"> <!-- content of timeline box 7 -->
+					<h2>1989</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1989 saw Morbid Angel’s Altars of Madness explode onto the scene, bringing unmatched speed, complexity, and aggression to death metal.</strong> Its chaotic riffs and blast‑beat intensity helped cement Florida as a major hub for the genre and pushed extreme metal into new territory.</p><img src="images/morbid-angel.jpg" alt="morbid-angel-band"></div>
+				</div>
+				<div class="timeline_container right">
+					<div class="content"> <!-- content of timeline box 8 -->
+					<h2>1992</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1992 became a defining year for second‑wave black metal as bands like Mayhem, Darkthrone, and Burzum released raw, icy, and atmospheric albums that shaped the genre’s identity.</strong> Their lo‑fi production, tremolo riffs, and cold aesthetic created the blueprint for modern black metal.</p><img src="images/second-wave-black-metal.jpg" alt="black-metal"></div>
+				</div>
+				<div class="timeline_container left">
+					<div class="content"> <!-- content of timeline box 9 -->
+					<h2>1996</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1996 marked the rise of nu‑metal as bands like Korn and Deftones blended heavy riffs with hip‑hop, alternative, and emotional intensity.</strong> This new sound connected with a younger generation and pushed metal into mainstream visibility again.</p><img src="images/korn.jpg" alt="korn-band"></div>
+				</div>
+				<div class="timeline_container right">
+					<div class="content"> <!-- content of timeline box 10 -->
+					<h2>1999</h2>
+					<div class="underline"></div> <!-- underlines header -->
+					<p><strong>1999 introduced Slipknot’s self‑titled debut, a chaotic, percussive, and brutally heavy album that re‑energized metal heading into the 2000s.</strong> Their masked image, layered sound, and explosive aggression made them one of the most influential bands of the era.</p><img src="images/slipknot.jpg" alt="slipknot-band"></div>
+				</div>
+			</div>
+		</div> <!-- end of main content -->
+	</div>
+	<footer> <!-- start of footer -->
+		<a href="index.html">Home</a> <a href="genres.html">Genres</a> <a href="timeline.html">Timeline</a> <a href="interviews.html">Interviews</a>
+		<p>Content assisted by AI and edited by author<br>
+		Site developed and maintained by Levi Dykstra 2026 &copy;</p> <!-- credit at bottom of page at footer -->
+	</footer> <!-- end of footer -->
 </body>
 </html>
